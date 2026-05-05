@@ -1,0 +1,23 @@
+# LaTeX intermediates
+*.aux
+*.log
+*.bbl
+*.bcf
+*.run.xml
+*.blg
+*.out
+*.toc
+*.synctex.gz
+
+# Quarto / pandoc build outputs
+template.tex
+template.pdf
+template_files/
+/.quarto/
+
+# Editor / OS junk
+.DS_Store
+.Rproj.user
+.Rhistory
+.Rdata
+/.luarc.json

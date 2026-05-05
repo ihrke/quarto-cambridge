@@ -1,0 +1,86 @@
+\documentclass[
+$if(cambridge_journal)$
+  journal=$cambridge_journal$,
+$else$
+  journal=medium,
+$endif$
+$if(manuscript_type)$
+  manuscript=$manuscript_type$,
+$else$
+  manuscript=article,
+$endif$
+$if(year)$
+  year=$year$,
+$else$
+  year=\the\year,
+$endif$
+$if(volume)$
+  volume=$volume$,
+$endif$
+$if(simfonts)$
+  simfonts=$simfonts$,
+$endif$
+$if(super)$
+  super=$super$,
+$endif$
+$if(articletitle)$
+  articletitle=$articletitle$,
+$endif$
+$if(chaptertitle)$
+  chaptertitle=$chaptertitle$,
+$endif$
+$if(keywords-show)$
+  keywords=$keywords-show$,
+$endif$
+$if(abbreviations-show)$
+  abbreviations=$abbreviations-show$,
+$endif$
+$if(jel-show)$
+  jel=$jel-show$,
+$endif$
+$if(msc-show)$
+  msc=$msc-show$,
+$endif$
+$if(suppmat)$
+  suppmat=$suppmat$,
+$endif$
+$if(suppdata)$
+  suppdata=$suppdata$,
+$endif$
+$if(orcid-show)$
+  orcid=$orcid-show$,
+$endif$
+$if(ack-show)$
+  ack=$ack-show$,
+$endif$
+$if(contrib-show)$
+  contrib=$contrib-show$,
+$endif$
+$if(financial-show)$
+  financial=$financial-show$,
+$endif$
+$if(conflicts-show)$
+  conflicts=$conflicts-show$,
+$endif$
+$if(ethics-show)$
+  ethics=$ethics-show$,
+$endif$
+$if(dates-show)$
+  dates=$dates-show$,
+$endif$
+$if(copyright-show)$
+  copyright=$copyright-show$,
+$endif$
+$if(email-show)$
+  email=$email-show$,
+$endif$
+$if(layout)$
+  layout=$layout$,
+$endif$
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{cup-journal}

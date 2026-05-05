@@ -1,0 +1,116 @@
+---
+title: "Cambridge University Press Quarto Template"
+running-title: "CUP-Quarto"
+format:
+  cambridge-pdf:
+    keep-tex: true
+cambridge_journal: medium
+manuscript_type: article
+year: 2026
+volume: 1
+doi: "10.1017/example.2026.001"
+ack-show: true
+contrib-show: true
+financial-show: true
+conflicts-show: true
+ethics-show: true
+dates-show: true
+copyright-show: true
+received: "1 January 2026"
+revised: "1 March 2026"
+accepted: "1 April 2026"
+author:
+  - name: Florence Author
+    corresponding: true
+    email: florence.author@cambridge.ac.uk
+    affiliations:
+      - name: Department of Statistics, University of Cambridge
+        city: Cambridge
+        postal-code: CB3 0WB
+        country: United Kingdom
+  - name: Samuel Author
+    affiliations:
+      - name: School of Mathematics, University of Edinburgh
+        city: Edinburgh
+        postal-code: EH9 3FD
+        country: United Kingdom
+  - name: Tatiana Author
+    affiliations:
+      - name: School of Mathematics, University of Edinburgh
+        city: Edinburgh
+        postal-code: EH9 3FD
+        country: United Kingdom
+keywords: [template, demo, cambridge]
+acknowledgments: |
+  We are grateful for the technical assistance of A. Author.
+fundingstatement: |
+  This research was supported by grants from the Engineering and Physical Sciences Research Council (EPSRC).
+competing: |
+  The authors declare no competing interests.
+dataavailability: |
+  Replication data and code are available at <https://example.org/data>.
+ethicalstandards: |
+  The research meets all ethical guidelines, including adherence to the legal requirements of the study country.
+authorcontributions: |
+  Conceptualization: F.A.; S.A. Methodology: F.A.; S.A. Data curation: T.A. Writing original draft: F.A.; S.A. All authors approved the final submitted draft.
+abstract: |
+  This document is a template demonstrating the Cambridge University Press journal format adapted for Quarto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+bibliography: example.bib
+---
+
+# Introduction {#sec-intro}
+
+This demo file is intended to serve as a "starter file" for preparing manuscript submissions to Cambridge University Press journals using Quarto.
+
+By default, this template uses `biblatex` and adopts the Chicago referencing style. However, the journal you're submitting to may require a different reference style; specify the journal you're using with the `cambridge_journal` option.
+
+@Bayer_etal_2013 reports findings consistent with @Adade_etal_2007. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+## Subsection example
+
+Subsection text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+### Subsubsection example
+
+Subsubsection text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+# Equations
+
+Equations work as expected, both inline $f(x) = i \times n + 1$ and as block equations:
+
+$$
+f(x) = \frac{1}{n} \sum_{i=1}^{n} x_i
+$$ {#eq-mean}
+
+You can refer to @eq-mean from the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+# Figures and Tables
+
+```{r}
+#| label: fig-test
+#| fig-width: 6
+#| fig-height: 3.5
+#| echo: false
+#| message: false
+#| fig-cap: "A simple test figure produced by ggplot2."
+library(ggplot2)
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  theme_bw()
+```
+
+I can refer to @fig-test from the text.
+
+```{r}
+#| label: tbl-test
+#| echo: false
+#| message: false
+#| tbl-cap: "A short summary of the `mtcars` data."
+knitr::kable(head(mtcars))
+```
+
+Tables can be cross-referenced as well, see @tbl-test.
+
+# Conclusion
+
+The conclusion text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

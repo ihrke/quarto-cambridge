@@ -1,0 +1,56 @@
+$if(doi)$
+\doi{$doi$}
+$endif$
+$if(received)$
+\received{$received$}
+$endif$
+$if(revised)$
+\revised{$revised$}
+$endif$
+$if(accepted)$
+\accepted{$accepted$}
+$endif$
+$if(published)$
+\published{$published$}
+$endif$
+
+$if(running-title)$
+\title[$running-title$]{$title$}
+$else$
+\title{$title$}
+$endif$
+
+$for(by-author)$
+\author{$it.name.literal$}
+$if(it.affiliations)$
+$for(it.affiliations)$
+$if(it/first)$
+\affiliation{$if(it.department)$$it.department$, $endif$$it.name$$if(it.city)$, $it.city$$endif$$if(it.region)$, $it.region$$endif$$if(it.postal-code)$, $it.postal-code$$endif$$if(it.country)$, $it.country$$endif$}
+$else$
+\alsoaffiliation{$if(it.department)$$it.department$, $endif$$it.name$$if(it.city)$, $it.city$$endif$$if(it.region)$, $it.region$$endif$$if(it.postal-code)$, $it.postal-code$$endif$$if(it.country)$, $it.country$$endif$}
+$endif$
+$endfor$
+$endif$
+$if(it.attributes.corresponding)$
+$if(it.email)$
+\email[$it.name.literal$]{$it.email$}
+$endif$
+$endif$
+$endfor$
+
+$if(keywords)$
+\keywords{$for(keywords)$$keywords$$sep$, $endfor$}
+$endif$
+$if(jel)$
+\jel{$for(jel)$$jel$$sep$, $endfor$}
+$endif$
+$if(msc)$
+\msc{$for(msc)$$msc$$sep$, $endfor$}
+$endif$
+$if(abbreviations)$
+\abbreviations{$abbreviations$}
+$endif$
+
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$

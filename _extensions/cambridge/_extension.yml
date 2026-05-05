@@ -1,0 +1,27 @@
+title: Cambridge
+author: Matthias Mittner
+version: 0.1.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    common:
+      toc: false
+      filters:
+        - cambridge.lua
+    pdf:
+      cite-method: biblatex
+      include-in-header:
+        - header.tex
+      template: "template_cambridgecompat.tex"
+      format-resources:
+        - cup-journal.cls
+        - cup-logo-new.pdf
+        - example-image-16x10.pdf
+        - example-image.pdf
+      template-partials:
+        - "partials/doc-class.tex"
+        - "partials/title.tex"
+        - "partials/before-body.tex"
+        - "partials/before-bib.tex"
+        - "partials/biblio.tex"
+        - "partials/after-body.tex"
