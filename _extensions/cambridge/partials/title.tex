@@ -21,7 +21,7 @@ $else$
 $endif$
 
 $for(by-author)$
-\author{$it.name.literal$}
+\author{$it.name.literal$$if(it.orcid)$\,\orcidlink{$it.orcid$}$endif$}
 $if(it.affiliations)$
 $for(it.affiliations)$
 $if(it/first)$

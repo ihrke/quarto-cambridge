@@ -86,13 +86,14 @@ These render as `\paragraph{...}` blocks just before the bibliography:
 
 ### Authors and affiliations
 
-Standard Quarto author metadata is supported. The corresponding author's email is emitted with `\email[Name]{address}`.
+Standard Quarto author metadata is supported. The corresponding author's email is emitted with `\email[Name]{address}`. Each author may carry an `orcid:` field; when present, the official ORCID iD badge (via the `orcidlink` LaTeX package) is rendered as a hyperlink next to the author's name.
 
 ```yaml
 author:
   - name: Florence Author
     corresponding: true
     email: f.a@cam.ac.uk
+    orcid: 0000-0001-2345-6789
     affiliations:
       - name: Department of Statistics, University of Cambridge
         city: Cambridge

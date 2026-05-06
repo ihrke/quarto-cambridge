@@ -23,12 +23,14 @@ author:
   - name: Florence Author
     corresponding: true
     email: florence.author@cambridge.ac.uk
+    orcid: 0000-0001-2345-6789
     affiliations:
       - name: Department of Statistics, University of Cambridge
         city: Cambridge
         postal-code: CB3 0WB
         country: United Kingdom
   - name: Samuel Author
+    orcid: 0000-0002-3456-7890
     affiliations:
       - name: School of Mathematics, University of Edinburgh
         city: Edinburgh
