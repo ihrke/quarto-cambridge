@@ -51,6 +51,18 @@ $if(abbreviations)$
 \abbreviations{$abbreviations$}
 $endif$
 
+% After \maketitle has rendered the title page (with ORCID badges next to
+% authors), strip any \orcidlink{...} calls from \@author@i so the badge
+% doesn't leak into the even-page running head.
+\makeatletter
+\g@addto@macro{\maketitle}{%
+  \begingroup
+    \let\orcidlink\@gobble
+    \protected@xdef\@author@i{\@author@i}%
+  \endgroup
+}
+\makeatother
+
 $for(bibliography)$
 \addbibresource{$bibliography$}
 $endfor$
