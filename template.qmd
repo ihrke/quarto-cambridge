@@ -55,6 +55,8 @@ ethicalstandards: |
   The research meets all ethical guidelines, including adherence to the legal requirements of the study country.
 authorcontributions: |
   Conceptualization: F.A.; S.A. Methodology: F.A.; S.A. Data curation: T.A. Writing original draft: F.A.; S.A. All authors approved the final submitted draft.
+aistatement: |
+  The authors used GitHub Copilot for code completion during analysis-script development. No generative AI tools were used in drafting the manuscript text.
 abstract: |
   This document is a template demonstrating the Cambridge University Press journal format adapted for Quarto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 bibliography: example.bib

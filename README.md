@@ -83,6 +83,7 @@ These render as `\paragraph{...}` blocks just before the bibliography:
 - `dataavailability`: a string with the data-availability statement
 - `ethicalstandards`: a string with the ethical-standards statement
 - `authorcontributions`: a string with the author-contributions statement (CRediT roles)
+- `aistatement`: a string disclosing use of generative AI tools (rendered under the heading "Use of generative AI"; required by several Cambridge journals)
 
 ### Authors and affiliations
 
