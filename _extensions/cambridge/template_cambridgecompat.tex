@@ -83,6 +83,36 @@ $if(strikeout)$
   \usepackage{soul}
 \fi
 $endif$
+$if(lineno)$
+% Line numbering for manuscripts under review.
+% [mathlines] enables numbering inside math; the AtBeginDocument hook wraps
+% amsmath display environments so they aren't silently skipped, and defers
+% \linenumbers itself until after lualatex packages (e.g. selnolig) finish
+% installing their \directlua hooks.
+\usepackage[mathlines]{lineno}
+\makeatletter
+\newcommand*\cup@patchAmsMathForLineno[1]{%
+  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+  \renewenvironment{#1}%
+    {\linenomath\csname old#1\endcsname}%
+    {\csname oldend#1\endcsname\endlinenomath}%
+}
+\newcommand*\cup@patchBothAmsMathForLineno[1]{%
+  \cup@patchAmsMathForLineno{#1}%
+  \cup@patchAmsMathForLineno{#1*}%
+}
+\AtBeginDocument{%
+  \cup@patchBothAmsMathForLineno{equation}%
+  \cup@patchBothAmsMathForLineno{align}%
+  \cup@patchBothAmsMathForLineno{flalign}%
+  \cup@patchBothAmsMathForLineno{alignat}%
+  \cup@patchBothAmsMathForLineno{gather}%
+  \cup@patchBothAmsMathForLineno{multline}%
+  \linenumbers
+}
+\makeatother
+$endif$
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 $if(numbersections)$
 \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}

@@ -44,6 +44,7 @@ All regular options are supported. In addition, the following options are availa
 - `doi`: the DOI string (rendered with `\doi{}`).
 - `received`, `revised`, `accepted`, `published`: dates that appear on the title page when `dates-show` is `true`.
 - `running-title`: short title used in page headers.
+- `lineno`: set to `true` to enable line numbering throughout the manuscript (useful for review submissions). Loads `lineno` with `[mathlines]` and patches the `amsmath` display environments so equation lines are numbered as well.
 
 ### Class option toggles
 
